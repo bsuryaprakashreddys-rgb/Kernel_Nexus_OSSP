@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/wait.h>
+int main()
+{
+char buf[20];
+int pid;
+
+printf("Enter command: ");
+scanf("%s", buf);
+
+pid = fork();
+
+if (pid == 0)
+{
+printf("Child PID = %d\n", getpid());
+printf("Parent PID = %d\n", getppid());
+
+execlp(buf, buf, NULL);
+}
+else
+    {
+printf("Parent PID = %d\n", getpid());
+printf("Child PID = %d\n", pid);
+wait(NULL);
+    }
+
+return 0;
+}
