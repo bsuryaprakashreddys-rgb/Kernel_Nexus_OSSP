@@ -1,3 +1,9 @@
+PRACTICAL-1
+2520030145
+B.Surya Prakash Reddy
+S-7
+
+
 The given C program demonstrates the creation of a parent and child process using the fork() system call. Before calling fork(), the program displays the PID and PPID of the original process. After fork() is executed successfully, two processes are created: a parent process and a child process. The child process receives a new PID, while its PPID is the PID of the parent process. The return value of fork() is used to identify whether the program is executing in the parent or child process.
 The parent and child processes display their respective PID, PPID, and child PID where applicable. The program also displays the message State = Running during its execution. However, the actual process state is maintained by the Linux kernel and was observed separately using Linux monitoring tools. This allows the process information displayed by the program to be compared with the actual state reported by the operating system.
 The ps command was used to observe the PID, PPID and current state of the processes. The command ps -o pid,ppid,state,cmd -C practical3 can be used to display this information in a simple format. The top command was used to monitor the processes dynamically and observe their state while they were executing. The /proc/<PID>/status file was also examined to obtain detailed information about an individual process, including its PID, PPID and current state.
