@@ -1,0 +1,8 @@
+Skill-2
+Vedhanth Sinde
+2520030004
+S-7
+
+Through this skill, I learned the basic working of an interactive command-line shell and how it continuously interacts with the user. I understood how to create a main loop that displays a prompt, accepts input, processes the command, and again waits for the next input until the user decides to exit. I learned how to store the entered characters in an input buffer and how the Enter key indicates that the command is ready to be processed. I also understood the importance of handling keyboard input properly, especially when characters are entered one by one. Features such as Backspace require the shell to remove the last character from the buffer and update the screen so that typing mistakes can be corrected.
+
+I also learned how multiple characters entered by the user are combined to form a complete command such as ls or hello. The input buffer temporarily stores these characters before the command is processed, so it must be managed correctly to avoid invalid input or overflow. I practiced testing the shell by entering different commands, correcting them with Backspace, submitting them using Enter, and checking the exit condition. Overall, this skill helped me understand the main components of a simple shell, including the prompt, main loop, keyboard input, input buffering, special-key handling, command processing, and continuous interaction with the user.
