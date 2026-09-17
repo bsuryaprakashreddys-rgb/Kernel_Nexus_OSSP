@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<sys/wait.h>
+#include<stdlib.h>
+int main(){
+int pid[3];  //for creating 3 childs off one parent
+for(int i=0;i<3;i++){
+pid[i]=fork(); //each fork for each child where prior child acts as parent to present child
+if(pid[i]==0){ //checking for the child processes
+printf("CHILD %d pid=%d\n", i+1, getpid());
+sleep(i+1);
+exit(0);
+}
+}
+wait(NULL);//taking the status of one child
+printf("Parent: any one child completes with wait()\n");//one parent printing its status
+waitpid(pid[2], NULL,0);//taking the startus of the 3rd child
+printf("Parent:child 3 completes with waitpid()\n");//one parent printing third child status
+wait(NULL);//last child status
+printf("Parent: ALL the childs completed");//another parent taking the status of the last child process
+
+}
