@@ -1,6 +1,6 @@
-PRACTICAL-1
-2520030337
-Aakash Dadhirao
+PRACTICAL-2
+2520030145
+B.Surya prakash reddy
 S-7
 
 
