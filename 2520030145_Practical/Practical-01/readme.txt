@@ -1,6 +1,6 @@
 PRACTICAL-1
-2520030337
-Aakash Dadhirao
+2520030145
+B.Surya Prakash Reddy
 S-7
 
 In this practical, I investigated the relationship between the hardware resources of a computer and the services provided by the Linux operating system. I used Linux terminal commands such as uname, lscpu, lsblk, ps, and top to understand how the operating system identifies, manages, and provides access to hardware resources. The uname -a command helped me view information about the Linux kernel, system architecture, and kernel version. This showed me that the Linux kernel is the main component of the operating system that communicates with and manages the hardware.
