@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<sys/wait.h>
+int main(){
+int pid;//variable to collect the status of fork
+pid = fork();//creating a process
+if(pid==0){//checking whether it is child or not
+printf("Child process %d\n",getpid());//printing the child proecess along with its pid
+exit(0);//exixsting the standard input
+}
+else{//parent orocess
+printf("Parent process %d\n",getpid());//printing the child process along with its pid
+sleep(30);//making the parent process wait without collecting the status of the child
+wait(NULL);
+printf("Parent process completed");
+}
+}
